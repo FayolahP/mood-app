@@ -7,9 +7,10 @@
 
 
 
-
 import SwiftUI
+import UIKit
 
+// Enum to represent different moods
 enum Mood: String, CaseIterable {
     case happy = "😊 Happy"
     case sad = "😢 Sad"
@@ -55,7 +56,7 @@ struct ContentView: View {
 
 struct HomePage: View {
     var body: some View {
-        Text("Welcome to Moody!")
+        Text("⭐️Welcome to Moody!⭐️")
             .font(.title)
             .padding()
     }
@@ -97,33 +98,89 @@ struct MoodSelectionPage: View {
 
 struct CalendarPage: View {
     // Mock data for demonstration
-    let moodData: [String: Mood] = [
-        "2024-04-01": .happy,
-        "2024-04-02": .sad,
-        "2024-04-03": .excited,
+    let moodData: [String: [Mood]] = [
+        "2024-04-28": [.happy, .excited],
+        "2024-04-29": [.sad],
+        "2024-04-30": [.angry, .calm, .surprised],
+        "2024-05-1": [ .calm,],
         // Add more mood data...
     ]
     
     var body: some View {
-        Text("Calendar Page")
-            .font(.title)
-            .padding()
+        ScrollView {
+            VStack {
+                Text("Calendar")
+                    .font(.title)
+                    .padding()
+                ForEach(Array(moodData.keys).sorted(), id: \.self) { date in
+                    HStack {
+                        Text(date)
+                            .padding(.leading)
+                        Spacer()
+                        Text(self.moodData[date]?.map { $0.rawValue }.joined(separator: ", ") ?? "Unknown")
+                            .padding(.trailing)
+                    }
+                    Divider()
+                }
+            }
+        }
+        .navigationBarTitle("Calendar")
     }
 }
 
+
+
 struct DataAnalysisPage: View {
+    
     var body: some View {
-        Text("Data Analysis Page")
-            .font(.title)
-            .padding()
+        VStack {
+            Text("Mood Analysis")
+                .font(.title)
+                .padding()
+            
+            Image("data") .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                .frame(width: 340.0, height: 480.0)
+            Text("🟢 - 😊 Happy, 🔵 - 😢 Sad, 🔴 - 😡 Angry, 🟡 - 😌 Calm")
+                .font(.title)
+                .padding()
+        }
     }
 }
 
 struct SettingsPage: View {
+    @State private var username: String = ""
+    @State private var email: String = ""
+    
     var body: some View {
-        Text("Settings Page")
-            .font(.title)
-            .padding()
+        VStack {
+            Text("Profile Settings")
+                .font(.title)
+                .padding()
+            
+            TextField("Name", text: $username)
+                .padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            TextField("Email", text: $email)
+                .padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            TextField("Password", text: $email)
+                .padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            Spacer()
+        }
+        .navigationBarTitle("Settings")
+    }
+}
+
+
+struct PieChartView: View {
+    let moodCounts: [Mood: Int]
+    
+    var body: some View {
+        // Implement your pie chart here
+        Text("Pie Chart Placeholder")
     }
 }
 
@@ -132,6 +189,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
 
 #Preview {
     ContentView()

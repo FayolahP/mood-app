@@ -14,6 +14,7 @@
 		3FE590852BDB2D5300C30BEB /* mood_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE590842BDB2D5300C30BEB /* mood_appTests.swift */; };
 		3FE5908F2BDB2D5300C30BEB /* mood_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5908E2BDB2D5300C30BEB /* mood_appUITests.swift */; };
 		3FE590912BDB2D5300C30BEB /* mood_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE590902BDB2D5300C30BEB /* mood_appUITestsLaunchTests.swift */; };
+		3FE5909E2BDD798800C30BEB /* Screenshot 2024-03-31 at 8.53.06 PM copy.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE5909D2BDD798800C30BEB /* Screenshot 2024-03-31 at 8.53.06 PM copy.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		3FE5908A2BDB2D5300C30BEB /* mood appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mood appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE5908E2BDB2D5300C30BEB /* mood_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mood_appUITests.swift; sourceTree = "<group>"; };
 		3FE590902BDB2D5300C30BEB /* mood_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mood_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FE5909D2BDD798800C30BEB /* Screenshot 2024-03-31 at 8.53.06 PM copy.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Screenshot 2024-03-31 at 8.53.06 PM copy.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		3FE590722BDB2D5100C30BEB /* mood app */ = {
 			isa = PBXGroup;
 			children = (
+				3FE5909D2BDD798800C30BEB /* Screenshot 2024-03-31 at 8.53.06 PM copy.pdf */,
 				3FE590732BDB2D5100C30BEB /* mood_appApp.swift */,
 				3FE590752BDB2D5100C30BEB /* ContentView.swift */,
 				3FE590772BDB2D5300C30BEB /* Assets.xcassets */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE5907B2BDB2D5300C30BEB /* Preview Assets.xcassets in Resources */,
+				3FE5909E2BDD798800C30BEB /* Screenshot 2024-03-31 at 8.53.06 PM copy.pdf in Resources */,
 				3FE590782BDB2D5300C30BEB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
